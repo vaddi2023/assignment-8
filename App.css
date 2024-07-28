@@ -1,0 +1,164 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --background-color: #f0f2f5;
+  --container-background: #ffffff;
+  --primary-color: #007bff;
+  --primary-hover-color: #0056b3;
+  --secondary-color: #dc3545;
+  --secondary-hover-color: #c82333;
+  --edit-color: #28a745;
+  --edit-hover-color: #218838;
+  --text-color: #333333;
+  --border-color: #ddd;
+  --box-shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Main App Container */
+.App {
+  background-color: var(--container-background);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px var(--box-shadow-color);
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.App:hover {
+  box-shadow: 0 6px 16px var(--box-shadow-color);
+}
+
+/* Header */
+h1 {
+  color: var(--text-color);
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/* Input Field */
+input[type="text"] {
+  padding: 10px;
+  font-size: 14px;
+  margin-right: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  width: calc(100% - 90px);
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: var(--primary-color);
+}
+
+/* Add Button */
+button {
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  width: 80px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background-color: var(--primary-hover-color);
+  transform: translateY(-2px);
+}
+
+/* Task List */
+ul {
+  list-style-type: disc;
+  padding: 0 0 0 20px;
+  margin-top: 20px;
+}
+
+/* Task Item */
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--container-background);
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px var(--box-shadow-color);
+  font-size: 14px;
+  transition: box-shadow 0.3s;
+}
+
+li:hover {
+  box-shadow: 0 4px 8px var(--box-shadow-color);
+}
+
+li div {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Task Text */
+span {
+  font-size: 14px;
+  color: var(--text-color);
+  flex-grow: 1;
+}
+
+/* Edit and Delete Buttons */
+li button {
+  background-color: transparent;
+  color: var(--text-color);
+  border: none;
+  cursor: pointer;
+  margin-left: 5px;
+  transition: color 0.3s;
+}
+
+li button:hover {
+  color: var(--edit-hover-color);
+}
+
+li button.delete:hover {
+  color: var(--secondary-hover-color);
+}
+
+li button.edit i {
+  color: var(--edit-color);
+}
+
+li button.delete i {
+  color: var(--secondary-color);
+}
+
+li input[type="text"] {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  width: calc(100% - 110px);
+  margin-right: 10px;
+  transition: border-color 0.3s;
+}
+
+li input[type="text"]:focus {
+  border-color: var(--primary-color);
+}
